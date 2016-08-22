@@ -1,0 +1,8 @@
+author = jason
+version = 1.0
+displayName = More Mirrors
+hideCode = true
+hideResources = true
+includeSource = false
+buildIgnore = .git\*, root\*, src\*, obj\*, bin\*, .vs\*, .gitattributes, *.config, *.md, LICENSE, *.sln, *.cs.user, *.csproj
+includePDB = true
