@@ -5,8 +5,12 @@ namespace MoreMirrors.Items {
     class MemoryMirror : ModItem {
         public override void SetDefaults() {
             item.CloneDefaults(ItemID.MagicMirror);
-            item.name = "Memory Mirror";
-            item.toolTip = "Gaze in the mirror to return home, gaze into the back to return to the place from which you came.";
+        }
+
+        public override void SetStaticDefaults()
+        {
+            DisplayName.SetDefault("Memory Mirror");
+            Tooltip.SetDefault("Gaze in the mirror to return home, gaze into the back to return to the place from which you came.");
         }
 
         public override void AddRecipes() {

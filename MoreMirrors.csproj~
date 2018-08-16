@@ -85,7 +85,7 @@
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>"E:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "C:\Users\mcghe\OneDrive\Documents\My Games\Terraria\ModLoader\Mod Sources\MoreMirrors" -eac "$(TargetPath)"</PostBuildEvent>
+    <PostBuildEvent>"E:\Program Files (x86)\Steam\steamapps\common\Terraria\tModLoaderServer.exe" -build "C:\Users\Jason\Documents\My Games\Terraria\ModLoader\Mod Sources\MoreMirrors" -eac "$(TargetPath)"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

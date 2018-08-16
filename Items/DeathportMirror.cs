@@ -5,8 +5,11 @@ namespace MoreMirrors.Items {
     class DeathportMirror : ModItem {
         public override void SetDefaults() {
             item.CloneDefaults(ItemID.MagicMirror);
-            item.name = "Deathport Mirror";
-            item.toolTip = "Gaze into the mirror to return to where you met your demise- for a price.";
+        }
+
+        public override void SetStaticDefaults() {
+            Tooltip.SetDefault("Gaze into the mirror to return to where you met your demise- for a price.");
+            DisplayName.SetDefault("Deathport Mirror");
         }
 
         public override void AddRecipes() {

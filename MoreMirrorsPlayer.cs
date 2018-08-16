@@ -9,7 +9,7 @@ namespace MoreMirrors {
         public override void PostItemCheck() {
             base.PostItemCheck();
             Item sItem = this.player.inventory[this.player.selectedItem];
-            if (sItem.name == "Memory Mirror") {
+            if (sItem.Name == "Memory Mirror") {
                 if (Main.mouseRight && Main.mouseRightRelease) {
                     if (!magicMirrorUseLocation.Equals(new Vector2(-1, -1))) {
                         this.player.Teleport(this.magicMirrorUseLocation);
@@ -22,14 +22,13 @@ namespace MoreMirrors {
                         this.player.Spawn();
                     }
                 }
-            } else if (sItem.name == "Deathport Mirror" && this.player.itemAnimation > 0) {
+            } else if (sItem.Name == "Deathport Mirror" && this.player.itemAnimation > 0) {
                 if (this.player.itemTime == 0) {
                     this.player.itemTime = sItem.useTime;
-                } else if (this.player.itemTime == sItem.useTime / 2) {
+                } else if (this.player.itemTime == sItem.useTime / 2 && !this.player.lastDeathPostion.Equals(new Vector2(0, 0))) {
                     this.player.statLife /= 2;
-                    float deathPosX = this.player.lastDeathPostion.X + 8 - this.player.width / 2;
-                    float deathPosY = this.player.lastDeathPostion.Y - this.player.height;
-                    this.player.Teleport(new Vector2(deathPosX, deathPosY));
+                    Vector2 playerOffset = new Vector2(8 - this.player.width / 2, -this.player.height);
+                    this.player.Teleport(this.player.lastDeathPostion + playerOffset);
                 }
             }
         }
